@@ -9,13 +9,5 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v5
-            - name: install cowsay prog
-              run:  sudo apt-get install cowsay -y
-            - name: execute cowsay
-              run: cowsay -f dragon " Run for cover" >> drag.txt
-            - name: test file exists
-              run: grep -i "dragon" drag.txt
-            - name: read files
-              run: cat dragon.txt
-            - name: list repo files
-              run: ls
+            - name: run script
+              run:  ./ascii-script.sh
