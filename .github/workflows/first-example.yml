@@ -1,0 +1,14 @@
+name: my first wf
+
+on: push
+
+jobs: 
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Welocom msg
+              run: echo "first gha jab"
+            - name: List files
+              run : ls
+            - name: Read file
+              run: cat README.md
