@@ -8,9 +8,10 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v5
-            - name: Welocom msg
-              run: echo "first gha jab"
-            - name: List files
-              run : ls
-            - name: Read file
-              run: cat README.md
+            - name: List and read files
+              run: |
+                   echo "first gha jab"
+                   ls -ltra
+                   cat README.md
+            - name: Generate ascii
+              run: cowsay -f dragon " Run for cover" >> drag.txt
